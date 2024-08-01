@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.Drive</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+	margin-bottom:-20px
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+	transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+nav ul li:hover {
+    transform: translateX(5px);
+}
+
+nav ul li:hover a {
+    color: #ff5a5f;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+	transition: color 0.3s ease-in;
+}
+
+#home {
+    padding-bottom: 140px;
+    padding-top: 60px;
+    background-color: #000; 
+    color: white; 
+}
+
+#home .section-content {
+    color: white; 
+}
+
+.hero {
+    background-image: url('gambar/3.webp');
+	background-color:;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 200px;
+}
+
+.hero h1{
+color:black;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+	transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+.hero .btn:hover {
+    background-color: #000;
+    color: #ff5a5f;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+	transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+.btn{
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+	transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+.btn:hover{
+    background-color: #000;
+    color: #ff5a5f;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+	transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+.o{
+  margin-left: 20px;
+  text-decoration: underline;
+  align-self: auto;
+  max-width: 100%;
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  transform: translateX(5px);
+  transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+.o:hover {
+  margin-left: 20px;
+  text-decoration: underline;
+  align-self: auto;
+  max-width: 100%;
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: #ff5a5f;
+  cursor: pointer;
+  transform: translateX(5px);
+  transition: color 0.3s ease-in;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section-content:nth-child(even) {
+    flex-direction: row-reverse; 
+}
+
+.section-content img {
+    width: 50%;
+    height: auto;
+}
+
+.section-content .text {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section-content h1{
+    font-size: 52px;
+}
+
+.section-content h4{
+    font-size: 22px;
+}
+
+form {
+    
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    color: black;
+    margin: 5px 0;
+}
+
+form input, form button {
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 16px;
+	outline: 2px solid;
+	outline-color: #011A27;
+    outline-offset: 0px;
+	border-radius: 20px;
+	transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+form input:hover{
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 16px;
+	outline: 2px solid;
+	outline-color: #ff5a5f;
+    outline-offset: 0px;
+	border-radius: 20px;
+	transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+form button {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+	outline: 2px solid;
+	outline-color: #011A27;
+    outline-offset: 0px;
+	border-radius: 20px;
+	transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+form button:hover {
+    background-color: white;
+    color: #ff5a5f;
+    border: none;
+    cursor: pointer;
+    outline: 2px solid;
+	outline-color: #ff5a5f;
+    outline-offset: 0px;
+	border-radius: 20px;
+	transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+form .input-container {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+}
+
+form .input-container label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: black;
+}
+
+form .input-container i {
+    margin-right: 5px;
+}
+
+ form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px; 
+    border: 2px solid #fff; 
+    outline: none; 
+    box-sizing: border-box;
+
+footer{
+text-align: center;
+}
+</style>
+<body>
+    <header>
+        <div class="logo">U.Drive</div>
+		<p>Gaffariastrobar(2259201027)</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#jalan">Berkendara</a></li>
+                <li><a href="#drive">Menjadi Mitra Kami</a></li>
+                <li><a href="#help">Pusat Bantuan</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h1>Sampai tujuan. Harimu menjadi milikmu</h1>
+            <a href="#jalan" class="btn">Berkendara dengan U.Drive</a>
+        </div>
+    </section>
+
+    <section id="jalan">
+	<div class="section-content">
+	 <div class="text">
+        <h1>Kemana saja bersama U.Drive</h1>
+		<h4>Pesan tumpangan, masuk, dan berangkat.</h4>
+        <form>
+           <label for="location">
+            <i class="fas fa-map-marker-alt"></i> Lokasi anda: 
+           </label>
+            <input type="location" id="email" name="email" required placeholder="Tempat penjemputan">
+            <label for="destination">
+             Tujuan anda: <i class="fas fa-map-marker-alt"></i>
+            </label>
+            <input type="location" id="password" name="password" required placeholder="Lokasi tujuan">
+            <div class="input-container">
+                        <label for="vehicle">Pilih kendaraan: </label>
+                        <select id="vehicle" name="vehicle">
+                            <option value="car">Mobil</option>
+                            <option value="motorcycle">Motor</option>
+                            <option value="taxi">Taxi</option>
+                            <option value="bicycle">Sepeda</option>
+                        </select>
+                    </div>
+            <button type="submit">Lihat harga</button>
+        </form>
+		</div>
+		<img src="gambar/2.webp" alt="Home Image">
+		</div>
+    </section>
+
+    <section id="ride">
+	 <div class="section-content">
+	 <img src="gambar/1.webp" alt="Home Image">
+	 <div class="text">
+        <h1>Berkendara dengan U.Drive</h1>
+        <p>Pilih perjalanan Anda dan atur lokasi Anda. Anda akan melihat foto pengemudi dan detail kendaraan, serta dapat melacak kedatangan mereka di peta.</p>
+        <a href="#jalan" class="btn">Pesan sekarang</a> <a href="#jalan" class="o"> Sudah punya akun? </a>
+	</div>
+	</div>
+	</section>
+
+    <section id="drive">
+	<div class="section-content">
+	 <div class="text">
+        <h1>Menjadi mitra kami</h1>
+        <p>Hasilkan uang sesuai jadwal Anda. Berkendaralah kapan pun Anda mau, dan pilih kendaraan Anda. Pelajari cara mulai mengemudi dengan U.Drive.</p>
+        <a href="#" class="btn">Ayo mulai</a> <a href="#" class="o"> Lihat manfaat kami </a>
+	  </div>
+	<img src="gambar/3.webp" alt="Home Image">
+	</div>
+	</section>
+
+    <section id="help">
+	<div class="section-content">
+	<img src="gambar/6.jpg" alt="Home Image">
+	 <div class="text">
+        <h1>Pusat bantuan</h1>
+        <p>Butuh bantuan? Tim dukungan kami siap membantu Anda mengatasi masalah atau pertanyaan apa pun yang mungkin Anda miliki.</p>
+        <a href="#" class="btn">Pusat bantuan</a>
+	 </div>
+	</div>
+	</section>
+
+
+</body>
+</html>
